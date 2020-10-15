@@ -4,9 +4,9 @@ services:
   app:
     build: .
     ports:
-      - '7550:8000'
+      - '7555:8000'
     volumes:
       - ./app:/usr/src/app
     environment:
       - COMPOSE_PROJECT_NAME=secreate_test
-    command: [ 'uvicorn', 'app:app', '--host 0.0.0.0']
+    command: 'uvicorn app:app --host 0.0.0.0'
